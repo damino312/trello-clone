@@ -1,8 +1,8 @@
-import React from "react";
+import Link from "next/link";
 
 export default function Logo() {
   return (
-    <div className="flex gap-3">
+    <Link className="flex gap-3" href={"/"}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -18,6 +18,6 @@ export default function Logo() {
         />
       </svg>
       <span className=" font-bold">Easify</span>
-    </div>
+    </Link>
   );
 }
