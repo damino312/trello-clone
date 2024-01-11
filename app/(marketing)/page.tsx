@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 export default function MarketingPage() {
   return (
     <div className="flex items-center justify-center flex-col pt-32">
@@ -15,9 +18,9 @@ export default function MarketingPage() {
         high rises to the home office, the way yiur team works in unique -
         accomplish it all with Easify
       </div>
-      <div className="px-5 py-3 text-white bg-black rounded-md">
-        Get Easify for free
-      </div>
+      <Button size={"lg"} asChild>
+        <Link href={"/sign-up"}>Get Easify for free</Link>
+      </Button>
     </div>
   );
 }
