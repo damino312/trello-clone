@@ -10,16 +10,19 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { organizations } from "@clerk/nextjs/api";
 import { NavItem, Organization } from "./nav-item";
+import { useState } from "react";
 
 interface SidebarProps {
   storageKey?: string;
 }
 
 export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
-  const [expanded, setExpanded] = useLocalStorage<Record<string, any>>(
-    storageKey,
-    {}
-  );
+  // const [expanded, setExpanded] = useLocalStorage<Record<string, any>>(
+  //   storageKey,
+  //   {}
+  // ); // не используй т.к. он не удаляет значение из локал стореджа и работает все из за этого неправильно
+  const [expanded, setExpanded] = useState<Record<string, any>>({});
+
   const { organization: activeOrg, isLoaded: isLoadedOrg } = useOrganization();
 
   const { userMemberships, isLoaded: isLoadedOrgList } = useOrganizationList({
@@ -28,6 +31,7 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
     },
   });
 
+  // превращает в нормальный массив для передачи в аккордион
   const defaultAccordionValue: string[] = Object.keys(expanded).reduce(
     (acc: string[], key: string) => {
       if (expanded[key]) {
@@ -52,6 +56,7 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
       </div>
     );
   }
+  console.log(expanded);
 
   return (
     <>
