@@ -98,3 +98,7 @@ export const NavItem = ({
     </AccordionItem>
   );
 };
+
+NavItem.Skeleton = function SkeletonNavItem() {
+  return <div></div>;
+};

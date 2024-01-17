@@ -1,4 +1,5 @@
 import { Sidebar } from "../../_components/sidebar";
+import SettingsPage from "./settings/page";
 
 const OrganizationIdPage = () => {
   return (

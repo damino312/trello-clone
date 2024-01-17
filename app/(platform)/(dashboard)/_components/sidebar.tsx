@@ -52,18 +52,32 @@ export const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
   if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading) {
     return (
       <div>
-        <Skeleton />
+        <div className="flex items-center justify-between mb-4">
+          <Skeleton className=" h-10 w-[70%]" />
+          <Skeleton className=" h-10 w-10" />
+        </div>
+        {Array.from({ length: 4 }, (v, index) => (
+          <div className="flex justify-between mb-2" key={index}>
+            <Skeleton className=" h-10 w-[15%]" />
+            <Skeleton className=" h-10 w-[75%]" />
+          </div>
+        ))}
       </div>
     );
   }
-  console.log(expanded);
 
   return (
     <>
-      <div className=" font-medium text-xs flex items-center mb-1">
+      <div className=" font-medium text-xs flex items-center mb-4">
         <span className="pl-4">Workspaces</span>
-        <Button size="sm" className=" ml-auto">
-          <Link href={"/select-org"}>+</Link>
+        <Button
+          size="sm"
+          className=" ml-auto border rounded-md border-black"
+          variant={"ghost"}
+        >
+          <Link href={"/select-org"} className=" text-lg">
+            +
+          </Link>
         </Button>
       </div>
       <Accordion
