@@ -1,10 +1,18 @@
+import { db } from "@/lib/db";
 import { Sidebar } from "../../_components/sidebar";
 import SettingsPage from "./settings/page";
+import { create } from "@/actions/create-dashboard";
+import { Form } from "./form";
 
-const OrganizationIdPage = () => {
+const OrganizationIdPage = async () => {
+  const boards = await db.board.findMany();
+
   return (
-    <div className="flex">
-      <div>Organization Page</div>
+    <div>
+      <Form />
+      {boards.map((el) => (
+        <div key={el.id}>{el.title}</div>
+      ))}
     </div>
   );
 };
