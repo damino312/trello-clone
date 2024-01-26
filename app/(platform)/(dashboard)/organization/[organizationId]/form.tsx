@@ -9,7 +9,7 @@ export const Form = () => {
       console.log(data, "SUCCESS");
     },
     onError: (error) => {
-      console.log(error);
+      console.error(error);
     },
   });
 

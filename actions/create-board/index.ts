@@ -7,6 +7,7 @@ import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { CreateBoard } from "./schema";
+import { error } from "console";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId } = auth();
@@ -21,6 +22,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   let board;
   try {
+    throw new Error("balbala");
     board = await db.board.create({
       data: {
         title,
