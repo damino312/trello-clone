@@ -1,18 +1,15 @@
-import { db } from "@/lib/db";
-import { Sidebar } from "../../_components/sidebar";
-import SettingsPage from "./settings/page";
-import { create } from "@/actions/create-dashboard";
-import { Form } from "./form";
+import { Separator } from "@/components/ui/separator";
+import { Info } from "./_components/info";
+import { BoardList } from "./_components/board-list";
 
 const OrganizationIdPage = async () => {
-  const boards = await db.board.findMany();
-
   return (
-    <div>
-      <Form />
-      {boards.map((el) => (
-        <div key={el.id}>{el.title}</div>
-      ))}
+    <div className="w-full mb-20">
+      <Info />
+      <Separator />
+      <div className="p-2 md:p-4">
+        <BoardList />
+      </div>
     </div>
   );
 };

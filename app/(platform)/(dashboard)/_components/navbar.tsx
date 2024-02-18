@@ -2,6 +2,7 @@ import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { MobileSidebar } from "./mobile-sidebar";
+import { FormPopover } from "@/components/form/form-popover";
 
 export const Navbar = () => {
   return (
@@ -12,20 +13,24 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <Logo />
           </div>
-          <Button
-            variant={"babyBlue"}
-            size="sm"
-            className="hidden md:block px-4"
-          >
-            Create
-          </Button>
-          <Button
-            variant={"babyBlue"}
-            size="sm"
-            className="px-3 py-2 block md:hidden"
-          >
-            +
-          </Button>
+          <FormPopover align="start" side="bottom" sideOffset={18}>
+            <Button
+              variant={"babyBlue"}
+              size="sm"
+              className="hidden md:block px-4"
+            >
+              Create
+            </Button>
+          </FormPopover>
+          <FormPopover>
+            <Button
+              variant={"babyBlue"}
+              size="sm"
+              className="px-3 py-2 block md:hidden"
+            >
+              +
+            </Button>
+          </FormPopover>
         </div>
 
         <div className="flex gap-2">
