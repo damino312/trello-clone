@@ -61,7 +61,7 @@ export const FormPopover = ({
         sideOffset={sideOffset}
       >
         <div className="text-sm font-medium text-center text-neutral-600 pb-4">
-          Create board
+          Создать борд
         </div>
         <PopoverClose asChild ref={closeRef}>
           <Button className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600">
@@ -73,12 +73,12 @@ export const FormPopover = ({
             <FormPicker id="image" errors={fieldErrors} />
             <FormInput
               id="title"
-              label="Board title"
+              label="Название борда"
               type="text"
               errors={fieldErrors}
             />
           </div>
-          <FormSubmit className="w-full">Create</FormSubmit>
+          <FormSubmit className="w-full">Создать</FormSubmit>
         </form>
       </PopoverContent>
     </Popover>

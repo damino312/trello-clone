@@ -49,6 +49,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             </Label>
           ) : null}
           <Input
+            autoComplete="off"
             onBlur={onBlur}
             defaultValue={defaultValue}
             ref={ref}
