@@ -2,12 +2,13 @@
 
 import { auth } from "@clerk/nextjs";
 import { InputType, ReturnType } from "./types";
-import { Board } from "@prisma/client";
+import { ACTION, Board, ENTITY_TYPE } from "@prisma/client";
 import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { DeleteBoard } from "./schema";
 import { redirect } from "next/navigation";
+import { createAuditLog } from "@/lib/create-audit-log";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
@@ -18,11 +19,17 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   }
   const { id } = data;
   try {
-    await db.board.delete({
+    const board = await db.board.delete({
       where: {
         id,
         orgId,
       },
+    });
+    await createAuditLog({
+      entityTitle: board.title,
+      action: ACTION.DELETE,
+      entityType: ENTITY_TYPE.BOARD,
+      entityId: board.id,
     });
   } catch (error) {
     return {

@@ -53,6 +53,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
       const listId = formData.get("listId") as string;
       const boardId = params.boardId as string;
       execute({ title, listId, boardId });
+      disableEditing();
     };
 
     if (isEditing) {
