@@ -33,7 +33,7 @@ export const Info = () => {
         </div>
         <div className="flex items-center text-xs text-muted-foreground">
           <CreditCard className="h-3 w-3 mr-1" />
-          <p>Free</p>
+          <p>Бесплатный</p>
         </div>
       </div>
     </div>

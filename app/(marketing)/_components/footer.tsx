@@ -8,8 +8,8 @@ export default function Footer() {
         <Logo />
       </div>
       <div className="flex justify-between md:max-w-screen-2xl w-full md:justify-end">
-        <Button variant={"ghost"}>Privacy Policy</Button>
-        <Button variant={"ghost"}>Terms of Service</Button>
+        <Button variant={"ghost"}>Политика конфиденциальности</Button>
+        <Button variant={"ghost"}>Условия использования</Button>
       </div>
     </div>
   );

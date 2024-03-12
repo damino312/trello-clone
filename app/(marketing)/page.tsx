@@ -5,21 +5,21 @@ export default function MarketingPage() {
   return (
     <div className="flex items-center justify-center flex-col pt-32">
       <div className=" bg-amber-100 p-3 rounded-md font-bold text-sm text-orange-800 mb-4 ">
-        Best task manager in the world
+        Лучший менеджер задач в мире
       </div>
       <div className=" font-bold text-3xl mb-4 sm:text-4xl ">
-        Easify helps team move{" "}
+        Easify помогает команде двигать
       </div>
       <div className=" text-white p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-bold text-3xl sm:text-4xl rounded-lg mb-4">
-        work forvard.
+        работу вперед.
       </div>
       <div className=" w-3/4 sm:w-2/4  text-center mb-4 text-gray-500 text-sm">
-        Collabarate, manage projects, and react new productivity peaks. From
-        high rises to the home office, the way yiur team works in unique -
-        accomplish it all with Easify
+        Сотрудничайте, управляйте проектами и реагируйте на новые пики
+        производительности. От высокие потолки в домашнем офисе, уникальный
+        подход к работе вашей команды - выполняйте все это Easify
       </div>
       <Button size={"lg"} asChild>
-        <Link href={"/sign-up"}>Get Easify for free</Link>
+        <Link href={"/sign-up"}>Попробовать Easify бесплатно</Link>
       </Button>
     </div>
   );

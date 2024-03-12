@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/localizations": "^1.26.16",
     "@clerk/nextjs": "^4.29.2",
     "@hello-pangea/dnd": "^16.5.0",
     "@prisma/client": "^5.8.1",

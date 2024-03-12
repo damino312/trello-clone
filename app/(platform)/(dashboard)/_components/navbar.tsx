@@ -19,7 +19,7 @@ export const Navbar = () => {
               size="sm"
               className="hidden md:block px-4"
             >
-              Create
+              Создать
             </Button>
           </FormPopover>
           <FormPopover>

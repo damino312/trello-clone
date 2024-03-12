@@ -36,7 +36,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     });
   } catch (error) {
     return {
-      error: "Failed to delete",
+      error: "Не удалось удалить",
     };
   }
   revalidatePath(`/board/${orgId}`);

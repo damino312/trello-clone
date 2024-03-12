@@ -3,11 +3,11 @@ import { z } from "zod";
 export const UpdateBoard = z.object({
   title: z
     .string({
-      required_error: "Title is required",
-      invalid_type_error: "Title is required",
+      required_error: "Название обязательно",
+      invalid_type_error: "Название обязательно",
     })
     .min(3, {
-      message: "Title is too short",
+      message: "Название слишком короткое",
     }),
   id: z.string(),
 });

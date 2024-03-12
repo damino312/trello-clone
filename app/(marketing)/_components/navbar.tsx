@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 import Logo from "@/components/logo";
 export default function NavBar() {
@@ -10,10 +11,12 @@ export default function NavBar() {
         </div>
 
         <div className="space-x-4 md:block md:w-auto flex items-center justify-between w-full">
-          <Button className="border" size={"sm"} variant={"ghost"}>
-            Login
+          <Button className="border" size={"sm"} variant={"ghost"} asChild>
+            <Link href={"/sign-up"}>Логин</Link>
           </Button>
-          <Button>Get Easify for free</Button>
+          <Button size={"lg"} asChild>
+            <Link href={"/sign-up"}>Попробовать Easify бесплатно</Link>
+          </Button>
         </div>
       </div>
     </div>

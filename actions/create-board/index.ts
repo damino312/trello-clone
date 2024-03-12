@@ -6,7 +6,6 @@ import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { CreateBoard } from "./schema";
-import { error } from "console";
 import { createAuditLog } from "@/lib/create-audit-log";
 import { ACTION, ENTITY_TYPE } from "@prisma/client";
 
@@ -32,7 +31,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     !imageUserName
   ) {
     return {
-      error: "Missing fields. Failed to create board.",
+      error: "Поля пропущены. Ошибка в создании борда.",
     };
   }
 
@@ -57,7 +56,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     });
   } catch (error) {
     return {
-      error: "Failed to create",
+      error: "Не удалось создать.",
     };
   }
 

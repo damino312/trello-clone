@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Activity, CreditCard, Layout, Settings } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 
 export type Organization = {
   id: string;
@@ -32,25 +31,25 @@ export const NavItem = ({
   const pathname = usePathname();
   const routes = [
     {
-      label: "Boards",
+      label: "Борды",
       icon: <Layout className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}`,
     },
     {
-      label: "Activity",
+      label: "Активность",
       icon: <Activity className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}/activity`,
     },
     {
-      label: "Settings",
+      label: "Настройки",
       icon: <Settings className="h-4 w-4 mr-2" />,
       href: `/organization/${organization.id}/settings`,
     },
-    {
-      label: "Billing",
-      icon: <CreditCard className="h-4 w-4 mr-2" />,
-      href: `/organization/${organization.id}/billing`,
-    },
+    // {
+    //   label: "Billing",
+    //   icon: <CreditCard className="h-4 w-4 mr-2" />,
+    //   href: `/organization/${organization.id}/billing`,
+    // },
   ];
 
   const onClick = (href: string) => {
