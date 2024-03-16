@@ -15,7 +15,7 @@ export default function NavBar() {
             <Link href={"/sign-up"}>Логин</Link>
           </Button>
           <Button size={"lg"} asChild>
-            <Link href={"/sign-up"}>Попробовать Easify бесплатно</Link>
+            <Link href={"/sign-up"}>Попробовать </Link>
           </Button>
         </div>
       </div>

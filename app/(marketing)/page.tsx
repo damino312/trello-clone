@@ -7,7 +7,7 @@ export default function MarketingPage() {
       <div className=" bg-amber-100 p-3 rounded-md font-bold text-sm text-orange-800 mb-4 ">
         Лучший менеджер задач в мире
       </div>
-      <div className=" font-bold text-3xl mb-4 sm:text-4xl ">
+      <div className=" font-bold text-3xl mb-4 sm:text-4xl text-center ">
         Easify помогает команде двигать
       </div>
       <div className=" text-white p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-bold text-3xl sm:text-4xl rounded-lg mb-4">

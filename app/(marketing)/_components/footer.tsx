@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="hidden md:flex items-center">
         <Logo />
       </div>
-      <div className="flex justify-between md:max-w-screen-2xl w-full md:justify-end">
+      <div className="flex justify-between sm:flex-row flex-col md:max-w-screen-2xl w-full md:justify-end">
         <Button variant={"ghost"}>Политика конфиденциальности</Button>
         <Button variant={"ghost"}>Условия использования</Button>
       </div>
