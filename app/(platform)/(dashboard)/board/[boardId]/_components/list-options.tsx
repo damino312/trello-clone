@@ -78,7 +78,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
           onClick={onAddCard}
           className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
         >
-          Add card...
+          Добавить карточку
         </Button>
         <form action={onCopy}>
           <input hidden name="id" id="id" value={data.id} />
@@ -87,7 +87,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
             className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
             variant="ghost"
           >
-            Copy list...
+            Копировать карточку
           </FormSubmit>
         </form>
         <Separator />
